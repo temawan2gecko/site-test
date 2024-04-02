@@ -1695,7 +1695,7 @@ a:hover {
 .help {
   min-height: 610px;
   padding-bottom: 50px;
-  background-image: url(../img/about/background.PNG);
+  background-image: url(../img/about/background.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2059,10 +2059,15 @@ a:hover {
   }
 }
 .item1__img {
-  max-width: 190px;
+  object-fit: fill;
+}
+
+.inner-about__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 260px;
   width: 100%;
-  max-height: 260px;
-  height: 100%;
 }
 
 .item1-content {
@@ -2524,6 +2529,33 @@ a:hover {
   box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.5);
 }
 
+.item-price__wrap {
+  max-width: 420px !important;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-price__img {
+  max-width: 420px;
+  height: auto;
+}
+@media (max-width: 500px) {
+  .item-price__img {
+    max-width: 350px;
+  }
+}
+@media (max-width: 400px) {
+  .item-price__img {
+    max-width: 340px;
+  }
+}
+@media (max-width: 380px) {
+  .item-price__img {
+    max-width: 320px;
+  }
+}
 .item-price__title {
   line-height: 1.35;
   font-weight: 800;
@@ -2833,6 +2865,7 @@ a:hover {
   }
 }
 .content-blogs__item3 {
+  gap: 40px;
   flex-direction: column;
   padding: 10px 10px 30px 10px;
   border-radius: 20px;
@@ -2855,9 +2888,27 @@ a:hover {
 .content-blogs__item3 h4 {
   padding-top: 30px;
 }
+@media (max-width: 1200px) {
+  .content-blogs__item3 h4 {
+    padding-top: 0;
+  }
+}
+
+.content-blogs__wrap {
+  max-width: 440px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .item-blogs {
   display: flex;
+}
+@media (max-width: 1200px) {
+  .item-blogs {
+    align-items: center;
+  }
 }
 @media (max-width: 768px) {
   .item-blogs {
@@ -2869,7 +2920,18 @@ a:hover {
   max-width: 440px;
   width: 100%;
   height: 100%;
-  margin: 0 auto;
+}
+.item-blogs__inner {
+  max-width: 440px;
+}
+@media (max-width: 1200px) {
+  .item-blogs__inner {
+    height: auto;
+    display: flex;
+    max-width: 700px;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
 .item-blogs__title {
   font-weight: 800;
